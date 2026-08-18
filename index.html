@@ -14,8 +14,9 @@
     html, body {
       width: 100%;
       height: 100%;
-      /* Matches the exact mint green from your section background */
-      background-color: #A0C3B5;
+      /* Smooth transition from white top header to mint green bottom section */
+      background: linear-gradient(to bottom, #ffffff 0%, #ffffff 35%, #A0C3B5 35%, #A0C3B5 100%);
+      background-attachment: fixed;
       display: flex;
       justify-content: center;
       align-items: flex-start;
