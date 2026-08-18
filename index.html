@@ -14,37 +14,26 @@
       padding: 0;
       width: 100%;
       height: 100%;
-      background-color: #f4f4f4;
+      background-color: #ffffff;
       display: flex;
       justify-content: center;
       align-items: center;
-      overflow: hidden; /* Prevents outer scrollbars */
+      overflow: hidden;
     }
 
-    /* Container wraps and crops the top banner */
     .iframe-container {
       position: relative;
       width: 100%;
       max-width: 1200px;
       height: 100vh;
-      overflow: hidden; /* Clips the top banner portion */
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
     }
 
     iframe {
       width: 100%;
       border: none;
-      /* Shifts the iframe up by 50px to hide the Wix banner at the top */
-      margin-top: -50px;
-      height: calc(100% + 50px);
-    }
-
-    /* Desktop adjustments to keep margins on larger screens */
-    @media (min-width: 768px) {
-      .iframe-container {
-        width: 90%;
-        height: 90vh;
-      }
+      margin-top: -50px; /* Hides top banner */
+      height: calc(100% + 100px); /* Hides bottom banner */
     }
   </style>
 </head>
