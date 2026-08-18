@@ -14,36 +14,21 @@
     html, body {
       width: 100%;
       height: 100%;
-      overflow-x: hidden;
-      background-color: #ffffff;
+      /* Matches the exact mint green from your section background */
+      background-color: #A0C3B5;
       display: flex;
       justify-content: center;
       align-items: flex-start;
+      overflow-x: hidden;
     }
 
     iframe {
       width: 100vw;
-      min-width: 100vw;
+      max-width: 100%;
       height: 100vh;
       border: 0;
       display: block;
       margin: 0 auto;
-    }
-
-    /* Target mobile browsers to prevent post-load offset */
-    @media (max-width: 768px) {
-      body {
-        position: fixed;
-        width: 100dvw;
-        height: 100dvh;
-      }
-      
-      iframe {
-        width: 100% !important;
-        min-width: 100% !important;
-        transform: scale(1);
-        transform-origin: top center;
-      }
     }
   </style>
 </head>
