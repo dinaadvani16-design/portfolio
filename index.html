@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>Dina Advani</title>
   <style>
     * {
@@ -10,23 +10,39 @@
       padding: 0;
       box-sizing: border-box;
     }
+
     html, body {
       width: 100%;
       height: 100%;
       overflow-x: hidden;
       background-color: #ffffff;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
     }
+
     iframe {
-      width: 100%;
+      width: 100vw;
+      min-width: 100vw;
       height: 100vh;
       border: 0;
       display: block;
+      margin: 0 auto;
     }
-    /* Force mobile webkit viewports to fit without side margins */
-    @media screen and (max-width: 768px) {
+
+    /* Target mobile browsers to prevent post-load offset */
+    @media (max-width: 768px) {
+      body {
+        position: fixed;
+        width: 100dvw;
+        height: 100dvh;
+      }
+      
       iframe {
-        width: 100vw;
-        min-width: 100vw;
+        width: 100% !important;
+        min-width: 100% !important;
+        transform: scale(1);
+        transform-origin: top center;
       }
     }
   </style>
